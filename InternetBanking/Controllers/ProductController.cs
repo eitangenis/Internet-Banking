@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace InternetBanking.WebApp.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class ProductController : Controller
+    public class ProductController : BaseController
     {
         private readonly IProductService _productService;
 

@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace InternetBanking.WebApp.Controllers
 {
     [Authorize(Roles = "Client")]
-    public class PaymentController : Controller
+    public class PaymentController : BaseController
     {
         private readonly IPaymentService _paymentService;
         private readonly IProductService _productService;

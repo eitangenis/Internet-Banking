@@ -7,11 +7,12 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using InternetBanking.Core.Application.Enums;
 using InternetBanking.Core.Application.ViewModels.Dashboard;
+using InternetBanking.WebApp.Controllers;
 
 namespace InternetBanking.Controllers
 {
     [Authorize]
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly IProductService _productService;
         private readonly IPaymentService _paymentService;

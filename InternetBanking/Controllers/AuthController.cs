@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InternetBanking.WebApp.Controllers
 {
-    public class AuthController : Controller
+    public class AuthController : BaseController
     {
         private readonly IUserService _userService;
 

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace InternetBanking.WebApp.Controllers
 {
     [Authorize(Roles = "Client")]
-    public class BeneficiaryController : Controller
+    public class BeneficiaryController : BaseController
     {
         private readonly IBeneficiaryService _beneficiaryService;
 
