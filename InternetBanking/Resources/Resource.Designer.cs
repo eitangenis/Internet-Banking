@@ -70,7 +70,7 @@ namespace InternetBanking.WebApp.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Iniciar Sesion.
+        ///   Looks up a localized string similar to Connect.
         /// </summary>
         public static string BeginSession {
             get {
