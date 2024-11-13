@@ -4,11 +4,11 @@ namespace InternetBanking.Core.Application.Enums
 {
     public enum ProductType
     {
-        [Display(Name = "Cuenta de ahorro")]
+        [Display(Name = "Savings account")]
          SavingAccount = 1,
-        [Display(Name = "Tarjeta de crédito")]
+        [Display(Name = "Credit card")]
          CreditCard,
-        [Display(Name = "Préstamo")]
+        [Display(Name = "Loan")]
          Loan
     }
 }
