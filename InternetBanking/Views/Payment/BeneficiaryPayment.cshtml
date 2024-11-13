@@ -43,9 +43,9 @@
                             <span asp-validation-for="SourceAccountNumber" class="text-danger"></span>
                         </div>
                         <div class="mb-3">
-                            <label asp-for="DestinationAccountNumber" class="form-label form-base">Cuenta del beneficiario</label>
+                            <label asp-for="DestinationAccountNumber" class="form-label form-base">Beneficiary account</label>
                             <select asp-for="DestinationAccountNumber" class="form-select">
-                                <option value="">Seleccione un beneficiario</option>
+                                <option value="">choose Beneficiary</option>
                                 @foreach (var product in Model.Beneficiaries)
                                 {
                                     <option value="@product.AccountNumber">@($"{product.FullName} [{product.AccountNumber}]")</option>

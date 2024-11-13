@@ -43,9 +43,11 @@
                             <span asp-validation-for="SourceAccountNumber" class="text-danger"></span>
                         </div>
                         <div class="mb-3">
-                            <label asp-for="DestinationAccountNumber" class="form-label form-base">Prestamo a pagar</label>
+                            <label asp-for="DestinationAccountNumber" class="form-label form-base">
+                                Loan to pay
+                            </label>
                             <select asp-for="DestinationAccountNumber" class="form-select">
-                                <option value="">Seleccione el prestamo</option>
+                                <option value="">Choose Loan</option>
                                 @foreach (var product in Model.LoanProducts)
                                 {
                                     <option value="@product.AccountNumber">@($"{product.ProductType} [{product.AccountNumber}]")</option>
@@ -59,8 +61,8 @@
                             <span asp-validation-for="Amount" class="text-danger"></span>
                         </div>
 
-                        <button class="btn btn-primary">Guardar</button>
-                        <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Cancelar</a>
+                        <button class="btn btn-primary">Save</button>
+                        <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Cancel</a>
                     </form>
                 }
             </div>

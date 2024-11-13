@@ -45,7 +45,7 @@
                         <div class="mb-3">
                             <label asp-for="DestinationAccountNumber" class="form-label form-base"></label>
                             <select asp-for="DestinationAccountNumber" class="form-select">
-                                <option value="">Seleccione la tarjeta de credito</option>
+                                <option value="">Select the credit card</option>
                                 @foreach (var product in Model.CreditCardsProducts)
                                 {
                                     <option value="@product.AccountNumber">@($"{product.ProductType} [{product.AccountNumber}]")</option>

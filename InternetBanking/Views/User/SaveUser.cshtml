@@ -81,7 +81,7 @@
                         <label asp-for="UserType" class="form-label"></label>
                         <select asp-for="UserType" asp-items="Html.GetEnumSelectList<Roles>()"
                                 class="form-select">
-                            <option value=0>Seleccione un tipo de usuario</option>
+                            <option value=0>Choose user type</option>
                         </select>
                         <span asp-validation-for="UserType" class="text-danger"></span>
                     </div>
