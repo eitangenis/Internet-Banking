@@ -33,7 +33,7 @@
                         <div class="mb-3">
                             <label asp-for="SourceAccountNumber" class="form-label"></label>
                             <select asp-for="SourceAccountNumber" class="form-select">
-                                <option value="">Seleccione una cuenta</option>
+                                <option value="">@InternetBanking.WebApp.Resources.Resource.ChooseAmount</option>
                                 @foreach (var product in Model.Products)
                                 {
                                     <option value="@product.AccountNumber">@($"{product.ProductType} [{product.AccountNumber}]")</option>
@@ -44,7 +44,7 @@
                         <div class="mb-3">
                             <label asp-for="DestinationAccountNumber" class="form-label"></label>
                             <select asp-for="DestinationAccountNumber" class="form-select">
-                                <option value="">Seleccione una cuenta</option>
+                                <option value="">@InternetBanking.WebApp.Resources.Resource.ChooseAmount</option>
                                 @foreach (var product in Model.Products)
                                 {
                                     <option value="@product.AccountNumber">@($"{product.ProductType} [{product.AccountNumber}]")</option>

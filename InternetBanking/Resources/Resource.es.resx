@@ -153,4 +153,10 @@
   <data name="DeleteProduct" xml:space="preserve">
     <value>¿Está seguro de que desea eliminar el producto?</value>
   </data>
+  <data name="ChooseAmount" xml:space="preserve">
+    <value>Seleccione una cuenta</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>f</value>
+  </data>
 </root>

@@ -150,7 +150,13 @@
   <data name="SureDeleteProduct" xml:space="preserve">
     <value>האם אתה בטוח שברצונך למחוק את המוצר ולהעביר את הסכום לחשבון הראשי?</value>
   </data>
-  <data name="String1" xml:space="preserve">
+  <data name="DeleteProduct" xml:space="preserve">
     <value>האם אתה בטוח שברצונך למחוק את המוצר?</value>
+  </data>
+  <data name="ChooseAmount" xml:space="preserve">
+    <value>בחר כמות</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>f</value>
   </data>
 </root>

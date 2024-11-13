@@ -34,7 +34,7 @@
                         <div class="mb-3">
                             <label asp-for="SourceAccountNumber" class="form-label form-base"></label>
                             <select asp-for="SourceAccountNumber" class="form-select">
-                                <option value="">Seleccione una cuenta</option>
+                                <option value="">@InternetBanking.WebApp.Resources.Resource.ChooseAmount</option>
                                 @foreach (var product in Model.Products)
                                 {
                                     <option value="@product.AccountNumber">@($"{product.ProductType} [{product.AccountNumber}]")</option>
@@ -46,7 +46,7 @@
                     <label asp-for="SourceAccountNumber" class="form-label form-base"></label>
                     <select asp-for="SourceAccountNumber" class="form-select"
                     asp-items=@(new SelectList(Model.Products, "Id", $"AccountNumber - ProductType"))>
-                    <option value="0">Seleccione una cuenta</option>
+                    <option value="0">@InternetBanking.WebApp.Resources.Resource.ChooseAmount</option>
                     </select>
                     <span asp-validation-for="SourceAccountNumber" class="text-danger"></span>
                     </div>*@

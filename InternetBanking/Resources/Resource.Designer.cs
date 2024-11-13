@@ -79,6 +79,15 @@ namespace InternetBanking.WebApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Choose Amount.
+        /// </summary>
+        public static string ChooseAmount {
+            get {
+                return ResourceManager.GetString("ChooseAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete beneficiary with the account number.
         /// </summary>
         public static string DeleteBeneficiary {
@@ -138,6 +147,15 @@ namespace InternetBanking.WebApp.Resources {
         public static string PaymentToBeneficiary {
             get {
                 return ResourceManager.GetString("PaymentToBeneficiary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to f.
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         
