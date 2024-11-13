@@ -9,15 +9,15 @@ namespace InternetBanking.Core.Application.ViewModels.Payment
     {
         public int? Id { get; set; }
 
-        [Display(Name = "Cuenta origen")]
+        [Display(Name = "Origin account")]
         public string SourceAccountNumber { get; set; }
 
-        [Display(Name = "Cuenta destino")]
+        [Display(Name = "Destination account")]
         [DataType(DataType.Text)]
-        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [Required(ErrorMessage = "The field {0} is required")]
         public string DestinationAccountNumber { get; set; }
 
-        [Display(Name = "Monto")]
+        [Display(Name = "Amount")]
         [DataType(DataType.Currency)]
         public double Amount { get; set; }
         public PaymentType PaymentType { get; set; }

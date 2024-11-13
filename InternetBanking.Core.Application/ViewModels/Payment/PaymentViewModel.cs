@@ -7,13 +7,13 @@ namespace InternetBanking.Core.Application.ViewModels.Payment
     {
         public int? Id { get; set; }
 
-        [Display(Name = "Cuenta origen")]
+        [Display(Name = "Origin account")]
         public string SourceAccountNumber { get; set; }
 
-        [Display(Name = "Cuenta destino")]
+        [Display(Name = "Destination account")]
         public string DestinationAccountNumber { get; set; }
 
-        [Display(Name = "Monto")]
+        [Display(Name = "Amount")]
         public double Amount { get; set; }
         public PaymentType PaymentType { get; set; }
     }
