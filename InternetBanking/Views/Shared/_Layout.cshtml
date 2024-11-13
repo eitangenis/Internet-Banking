@@ -14,7 +14,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - InternetBanking</title>
+    <title>@ViewData["Title"] - OutwizeBankinge fi</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/InternetBanking.styles.css" asp-append-version="true" />
@@ -43,7 +43,9 @@
                             @if (User.Roles.FirstOrDefault() == Roles.Admin.ToString())
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Mantenimiento de Usuarios</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">
+                                        User Maintenance
+                                    </a>
                                 </li>
                             }
                             else if (User.Roles.FirstOrDefault() == Roles.Client.ToString())
@@ -53,27 +55,31 @@
                                         Pagos
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" asp-area="" asp-controller="Payment" asp-action="ExpressPayment">Expreso</a></li>
-                                        <li><a class="dropdown-item" asp-area="" asp-controller="Payment" asp-action="CreditCardPayment">Tarjeta de crédito</a></li>
-                                        <li><a class="dropdown-item" asp-area="" asp-controller="Payment" asp-action="LoanPayment">Préstamo</a></li>
-                                        <li><a class="dropdown-item" asp-area="" asp-controller="Payment" asp-action="BeneficiaryPayment">Beneficiarios</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Payment" asp-action="ExpressPayment">Express</a></li>
+                                        <li>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Payment" asp-action="CreditCardPayment">
+                                                Credit card
+                                            </a>
+                                        </li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Payment" asp-action="LoanPayment">Loan</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Payment" asp-action="BeneficiaryPayment">Beneficiaries</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Beneficiary" asp-action="Index">Beneficiario</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Beneficiary" asp-action="Index">Beneficiary</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Payment" asp-action="CashAdvances">Avance de efectivo</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Payment" asp-action="CashAdvances">Cash advance</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Payment" asp-action="AccountTransfer">Transferencia</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Payment" asp-action="AccountTransfer">Transfer</a>
                                 </li>
                             }
                         </ul>
                         <div class="d-lg-flex col-lg-3 justify-content-lg-end">
                             <span class="me-2 p-1">Bienvenido, @User.UserName</span>
                             <a class="btn btn-danger btn-sm" asp-controller="Auth" asp-action="LogOut">
-                                Cerrar Sesion
+                               Logout
                             </a>
                         </div>
                     }
@@ -89,7 +95,7 @@
 
     <footer class="border-top card-footer bg-white text-muted fixed-bottom">
         <div class="container">
-            &copy; 2024 - InternetBanking - Made by <a href="https://outwize.tech" target="_blank">Outwize</a>
+            &copy; 2024 - OutwizeBanking - Made by <a href="https://outwize.tech" target="_blank">Outwize</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

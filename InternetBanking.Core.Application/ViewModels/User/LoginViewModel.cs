@@ -4,12 +4,12 @@ namespace InternetBanking.Core.Application.ViewModels.User
 {
     public class LoginViewModel
     {
-        [Required(ErrorMessage = "Debe ingresar un nombre de usuario")]
-        [Display(Name = "Nombre de usuario")]
+        [Required(ErrorMessage = "Please fill user name")]
+        [Display(Name = "User Name")]
         [DataType(DataType.Text)]
         public string UserName { get; set; }
-        [Required(ErrorMessage = "Debe ingresar una contraseña")]
-        [Display(Name = "Contraseña")]
+        [Required(ErrorMessage = "Please fill password")]
+        [Display(Name = "Password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
         public bool HasError { get; set; }
