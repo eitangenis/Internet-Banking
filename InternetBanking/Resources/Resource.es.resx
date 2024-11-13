@@ -117,16 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="String1" xml:space="preserve">
-    <value>none</value>
+  <data name="NoPermissionSection" xml:space="preserve">
+    <value>No tiene permiso para acceder a esta sección</value>
   </data>
-  <data name="welcome" xml:space="preserve">
-    <value>welcome sir</value>
+  <data name="DeleteBeneficiary" xml:space="preserve">
+    <value>Eliminar beneficiario con el numero de cuenta</value>
   </data>
   <data name="LearnAbout" xml:space="preserve">
     <value>learn about us</value>
   </data>
   <data name="BeginSession" xml:space="preserve">
     <value>Iniciar Sesion</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Acceso denegado</value>
+  </data>
+  <data name="NoPermissionGoBack" xml:space="preserve">
+    <value>Lo sentimos, parece que no tiene permiso para acceder a esta sección. Por favor, vuelva al</value>
+  </data>
+  <data name="SureDeleeBeneficiary" xml:space="preserve">
+    <value>¿Está seguro de que desea eliminar al beneficiario?</value>
+  </data>
+  <data name="TransfersAccounts" xml:space="preserve">
+    <value>Transferencia entre cuentas</value>
+  </data>
+  <data name="NoProducts" xml:space="preserve">
+    <value>No hay productos registrados</value>
+  </data>
+  <data name="PaymentToBeneficiary" xml:space="preserve">
+    <value>¿Está seguro de que desea enviar el pago al beneficiario</value>
+  </data>
+  <data name="SureDeleteProduct" xml:space="preserve">
+    <value>¿Está seguro de que desea eliminar el producto y transferir el monto a la cuenta principal?</value>
+  </data>
+  <data name="DeleteProduct" xml:space="preserve">
+    <value>¿Está seguro de que desea eliminar el producto?</value>
   </data>
 </root>

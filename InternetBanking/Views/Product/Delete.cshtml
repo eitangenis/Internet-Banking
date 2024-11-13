@@ -1,14 +1,14 @@
 ﻿@using InternetBanking.Core.Application.Enums
 @model InternetBanking.Core.Application.ViewModels.Product.SaveProductViewModel
 @{
-    ViewData["Title"] = "Eliminar producto";
+    ViewData["Title"] = "Delete Product";
     bool transferAmount = Model.ProductType == ProductType.SavingAccount && Model.Amount > 0;
 }
 
 <div class="container mt-5 w-50">
     <div class="card card-box-shadow">
         <div class="card-header bg-white fw-bold">
-            <h4>Eliminar producto: @Model.AccountNumber</h4>
+            <h4>Delete Product: @Model.AccountNumber</h4>
         </div>
         <div class="card-body">
             <form method="post" asp-controller="Product" asp-action="DeleteProduct">
@@ -19,7 +19,7 @@
                 <div class="mb-3">
                     @if (transferAmount)
                     {
-                        <span>¿Está seguro de que desea eliminar el producto y transferir el monto a la cuenta principal?</span>
+                        <span>@InternetBanking.WebApp.Resources.Resource.SureDeleteProduct</span>
                     }
                     else
                     {
@@ -27,8 +27,8 @@
                     }
                 </div>
                 <div class="card-footer mt-2 bg-white">
-                    <button type="submit" class="btn btn-danger">Confirmar</button>
-                    <a class="btn btn-secondary" asp-action="Index" asp-route-userId="@Model.UserId">Cancelar</a>
+                    <button type="submit" class="btn btn-danger">Confirm</button>
+                    <a class="btn btn-secondary" asp-action="Index" asp-route-userId="@Model.UserId">Cancel</a>
                 </div>
             </form>
         </div>

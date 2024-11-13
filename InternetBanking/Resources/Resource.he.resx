@@ -117,16 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="String1" xml:space="preserve">
-    <value>none</value>
+  <data name="NoPermissionSection" xml:space="preserve">
+    <value>אין הרשאה למשאב זה</value>
   </data>
-  <data name="welcome" xml:space="preserve">
-    <value>welcome sir</value>
+  <data name="DeleteBeneficiary" xml:space="preserve">
+    <value>מחק את המוטב</value>
   </data>
   <data name="LearnAbout" xml:space="preserve">
     <value>עלינו</value>
   </data>
   <data name="BeginSession" xml:space="preserve">
     <value>התחבר</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>אין הרשאה</value>
+  </data>
+  <data name="NoPermissionGoBack" xml:space="preserve">
+    <value>אין הרשאה חזור לאחור</value>
+  </data>
+  <data name="SureDeleeBeneficiary" xml:space="preserve">
+    <value>האם אתה בטוח שאתה רוצה למחוק את המוטב</value>
+  </data>
+  <data name="TransfersAccounts" xml:space="preserve">
+    <value>העברה בין חשבונות</value>
+  </data>
+  <data name="NoProducts" xml:space="preserve">
+    <value>אין מוצרים</value>
+  </data>
+  <data name="PaymentToBeneficiary" xml:space="preserve">
+    <value>האם אתה מטוח שאתה רוצה להעביר תשלום למוטב</value>
+  </data>
+  <data name="SureDeleteProduct" xml:space="preserve">
+    <value>האם אתה בטוח שברצונך למחוק את המוצר ולהעביר את הסכום לחשבון הראשי?</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>האם אתה בטוח שברצונך למחוק את המוצר?</value>
   </data>
 </root>

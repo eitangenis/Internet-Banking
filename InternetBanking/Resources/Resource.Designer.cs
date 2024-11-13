@@ -61,11 +61,38 @@ namespace InternetBanking.WebApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Access Denied.
+        /// </summary>
+        public static string AccessDenied {
+            get {
+                return ResourceManager.GetString("AccessDenied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Iniciar Sesion.
         /// </summary>
         public static string BeginSession {
             get {
                 return ResourceManager.GetString("BeginSession", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete beneficiary with the account number.
+        /// </summary>
+        public static string DeleteBeneficiary {
+            get {
+                return ResourceManager.GetString("DeleteBeneficiary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the product?.
+        /// </summary>
+        public static string DeleteProduct {
+            get {
+                return ResourceManager.GetString("DeleteProduct", resourceCulture);
             }
         }
         
@@ -79,20 +106,65 @@ namespace InternetBanking.WebApp.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to none.
+        ///   Looks up a localized string similar to Sorry, it appears you do not have permission to access this section. Please go back to.
         /// </summary>
-        public static string String1 {
+        public static string NoPermissionGoBack {
             get {
-                return ResourceManager.GetString("String1", resourceCulture);
+                return ResourceManager.GetString("NoPermissionGoBack", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to welcome sir.
+        ///   Looks up a localized string similar to You do not have permission to access this section.
         /// </summary>
-        public static string welcome {
+        public static string NoPermissionSection {
             get {
-                return ResourceManager.GetString("welcome", resourceCulture);
+                return ResourceManager.GetString("NoPermissionSection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There are no registered products.
+        /// </summary>
+        public static string NoProducts {
+            get {
+                return ResourceManager.GetString("NoProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to send the payment to the beneficiary.
+        /// </summary>
+        public static string PaymentToBeneficiary {
+            get {
+                return ResourceManager.GetString("PaymentToBeneficiary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the beneficiary?.
+        /// </summary>
+        public static string SureDeleeBeneficiary {
+            get {
+                return ResourceManager.GetString("SureDeleeBeneficiary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the product and transfer the amount to the main account?.
+        /// </summary>
+        public static string SureDeleteProduct {
+            get {
+                return ResourceManager.GetString("SureDeleteProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfer between accounts.
+        /// </summary>
+        public static string TransfersAccounts {
+            get {
+                return ResourceManager.GetString("TransfersAccounts", resourceCulture);
             }
         }
     }

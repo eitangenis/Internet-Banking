@@ -1,23 +1,23 @@
 ﻿@model InternetBanking.Core.Application.ViewModels.Beneficiary.SaveBeneficiaryViewModel
 @{
-    ViewData["Title"] = "Eliminar beneficiario";
+    ViewData["Title"] = "Delete beneficiary";
 }
 
 <div class="container mt-5 w-50">
     <div class="card card-box-shadow">
         <div class="card-header bg-white fw-bold">
-            <h4>Eliminar beneficiario con el numero de cuenta: @Model.AccountNumberBeneficiary</h4>
+            <h4>@InternetBanking.WebApp.Resources.Resource.DeleteBeneficiary: @Model.AccountNumberBeneficiary</h4>
         </div>
         <form method="post" asp-controller="Beneficiary" asp-action="DeleteBeneficiary">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="card-body">
 
-                <span>¿Está seguro de que desea eliminar al beneficiario?</span>
+                <span>@InternetBanking.WebApp.Resources.Resource.SureDeleeBeneficiary</span>
             </div>
             <div class="card-footer mt-2 bg-white">
-                <button type="submit" class="btn btn-danger">Confirmar</button>
-                <a class="btn btn-secondary" asp-action="Index">Cancelar</a>
+                <button type="submit" class="btn btn-danger">Confirm</button>
+                <a class="btn btn-secondary" asp-action="Index">Cancel</a>
             </div>
         </form>
     </div>

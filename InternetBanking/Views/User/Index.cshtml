@@ -8,25 +8,25 @@
 
 @{
     var User = httpContextAccessor.HttpContext.Session.Get<AuthenticationResponse>("user");
-    ViewData["Title"] = "Mantenimiento de usuarios";
+    ViewData["Title"] = "Users Maintainance";
 }
 
 <div class="container">
     <h1 class="">Usuarios</h1>
     <a asp-controller="User" asp-action="Create" class="btn btn-primary m-3">
         <i class="bi bi-plus-circle-fill"></i>
-        Registrar usuario
+        Register user
     </a>
     <div class="border rounded-3 card-box-shadow bg-white p-4 mt-2">
         <table class="table table-hover">
             <thead class="fw-bold fs-6">
                 <tr>
-                    <th class="">Nombre</th>
-                    <th class="">Cedula</th>
-                    <th class="">Correo</th>
-                    <th class="">Usuario</th>
-                    <th class="">Tipo de usuario</th>
-                    <th class="">Estado</th>
+                    <th class="">LastName</th>
+                    <th class="">IdNumber</th>
+                    <th class="">Email</th>
+                    <th class="">UserName</th>
+                    <th class="">User Type</th>
+                    <th class="">State</th>
                     <th class="text-end">Opciones</th>
                 </tr>
             </thead>
@@ -47,10 +47,10 @@
                             @user.UserName
                         </td>
                         <td class="py-3 truncate-text">
-                            <span>@(user.UserType == Roles.Admin.ToString() ? "Administrador" : "Cliente")</span>
+                            <span>@(user.UserType == Roles.Admin.ToString() ? "Administrator" : "Client")</span>
                         </td>
                         <td class="py-3 truncate-text">
-                            <span>@(user.IsActive ? "Activo" : "Inactivo")</span>
+                            <span>@(user.IsActive ? "Active" : "Inactive")</span>
                         </td>
                         <td class="text-end align-items-center py-3">
                             @if (user.Id != User.Id)
@@ -59,26 +59,26 @@
                                 {
                                     <a class="btn btn-primary btn-sm" asp-controller="Product" asp-action="Index" asp-route-userId=@user.Id>
                                         <i class="bi bi-wallet-fill"></i>  
-                                        Ver Productos
+                                        Products
                                     </a>
                                 }
                                 @if (!user.IsActive)
                                 {
                                     <a class="btn btn-info btn-sm" asp-controller="User" asp-action="ConfirmAction" asp-route-id=@user.Id>
                                         <i class="bi bi-person-lines-fill"></i>
-                                        Activar
+                                        Activate
                                     </a>
                                 }
                                 else
                                 {
                                     <a class="btn btn-info btn-sm" asp-controller="User" asp-action="ConfirmAction" asp-route-id=@user.Id>
                                         <i class="bi bi-person-lines-fill"></i>
-                                        Desactivar
+                                        Desactivate
                                     </a>
                                 }
                                 <a class="btn btn-secondary btn-sm" asp-controller="User" asp-action="Edit" asp-route-id=@user.Id>
                                     <i class="bi bi-pencil-square"></i>
-                                    Editar
+                                    Edit
                                 </a>
                             }
                         </td>

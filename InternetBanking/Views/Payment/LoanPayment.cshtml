@@ -14,7 +14,7 @@
             <div class="card-body">
                 @if (Model.Products == null || Model.Products.Count == 0)
                 {
-                    <h4 class="mb-3">No hay productos registrados</h4>
+                    <h4 class="mb-3">@InternetBanking.WebApp.Resources.Resource.NoProducts</h4>
                     <a asp-controller="Home" asp-action="Index" class="btn btn-warning">Volver atras</a>
                 }
                 else

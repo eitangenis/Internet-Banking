@@ -7,18 +7,18 @@
 }
 
 <div class="container">
-    <h1 class="">Beneficiarios</h1>
+    <h1 class="">Beneficiaries</h1>
     <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <i class="bi bi-plus-circle-fill"></i>
-        Agregar beneficiario
+      Add Beneficiairies
     </button>
     <div class="border rounded-3 card-box-shadow bg-white p-4 mt-4">
         <table class="table table-hover">
             <thead class="fw-bold fs-6">
                 <tr>
-                    <th class="">Nombre de beneficiario</th>
-                    <th class="">Numero de cuenta</th>
-                    <th class="text-end">Opciones</th>
+                    <th class="">Beneficiary Number</th>
+                    <th class="">Account Number</th>
+                    <th class="text-end">Options</th>
                 </tr>
             </thead>
             <tbody class="table-group-divider">
@@ -36,7 +36,7 @@
                             <td class="text-end align-items-center py-3">
                                 <a class="btn btn-danger btn-sm" asp-controller="Beneficiary" asp-action="Delete" asp-route-id=@beneficiary.Id>
                                     <i class="bi bi-trash-fill"></i>
-                                    Eliminar
+                                    Delete
                                 </a>
                             </td>
                         </tr>

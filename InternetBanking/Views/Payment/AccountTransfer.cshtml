@@ -1,20 +1,20 @@
 ﻿@model InternetBanking.Core.Application.ViewModels.Payment.SavePaymentViewModel
 
 @{
-    ViewData["Title"] = "Transferencia entre cuentas";
+    ViewData["Title"] = "Transfer between accounts";
 }
 
 <div class="row">
     <div class="col-6 offset-3">
         <div class="card mt-3">
             <div class="card-header bg-primary-custom">
-                <h4>Transferencia entre cuentas</h4>
+                <h4>@InternetBanking.WebApp.Resources.Resource.TransfersAccounts</h4>
             </div>
             <div class="card-body">
                 @if (Model.Products == null || Model.Products.Count == 0)
                 {
-                    <h4 class="mb-3">No hay productos registrados</h4>
-                    <a asp-controller="Home" asp-action="Index" class="btn btn-warning">Volver atras</a>
+                    <h4 class="mb-3">@InternetBanking.WebApp.Resources.Resource.NoProducts</h4>
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-warning">go back</a>
                 }
                 else
                 {

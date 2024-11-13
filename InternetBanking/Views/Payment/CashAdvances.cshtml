@@ -1,19 +1,19 @@
 ﻿@model InternetBanking.Core.Application.ViewModels.Payment.SavePaymentViewModel
 
 @{
-    ViewData["Title"] = "Avances de efectivo";
+    ViewData["Title"] = "Cash advances";
 }
 
 <div class="row">
     <div class="col-6 offset-3">
         <div class="card mt-3">
             <div class="card-header bg-primary-custom">
-                <h4>Avances de efectivo</h4>
+                <h4>Cash advances</h4>
             </div>
             <div class="card-body">
                 @if (Model.Products == null || Model.Products.Count == 0)
                 {
-                    <h4 class="mb-3">No hay productos registrados</h4>
+                    <h4 class="mb-3">@InternetBanking.WebApp.Resources.Resource.NoProducts</h4>
                     <a asp-controller="Home" asp-action="Index" class="btn btn-warning">Volver atras</a>
                 }
                 else

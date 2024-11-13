@@ -2,20 +2,20 @@
 
 @{
     bool editMode = Model.Id == 0 ? false : true;
-    ViewData["Title"] = "Pago a beneficiario";
+    ViewData["Title"] = "Payment to beneficiary";
 }
 
 <div class="row">
     <div class="col-6 offset-3">
         <div class="card mt-3">
             <div class="card-header bg-primary-custom">
-                <h4>Pago a beneficiario</h4>
+                <h4>Pay to beneficiary</h4>
             </div>
             <div class="card-body">
                 @if (Model.Products == null || Model.Products.Count == 0)
                 {
-                    <h4 class="mb-3">No hay productos registrados</h4>
-                    <a asp-controller="Home" asp-action="Index" class="btn btn-warning">Volver atras</a>
+                    <h4 class="mb-3">@InternetBanking.WebApp.Resources.Resource.NoProducts</h4>
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-warning">go back</a>
                 }
                 else
                 {
@@ -59,8 +59,8 @@
                             <span asp-validation-for="Amount" class="text-danger"></span>
                         </div>
 
-                        <button class="btn btn-primary">Guardar</button>
-                        <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Cancelar</a>
+                        <button class="btn btn-primary">Save</button>
+                        <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Cancel</a>
                     </form>
                 }
             </div>
