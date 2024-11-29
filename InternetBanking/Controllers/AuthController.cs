@@ -1,4 +1,4 @@
-﻿using InternetBanking.Core.Application.Dtos.Account;
+using InternetBanking.Core.Application.Dtos.Account;
 using InternetBanking.Core.Application.Interfaces.Services;
 using InternetBanking.Core.Application.ViewModels.User;
 using InternetBanking.Core.Application.Helpers;
@@ -45,7 +45,30 @@ namespace InternetBanking.WebApp.Controllers
             }
         }
 
-        public async Task<IActionResult> LogOut()
+    [ServiceFilter(typeof(LoginAuthorize))]
+    [HttpPost]
+    public async Task<IActionResult> LoginBasic(LoginViewModel vm)
+    {
+      if (!ModelState.IsValid)
+      {
+        return View(vm);
+      }
+
+      AuthenticationResponse userVm = await _userService.LoginAsync(vm);
+      if (userVm != null && userVm.HasError != true)
+      {
+        HttpContext.Session.Set<AuthenticationResponse>("user", userVm);
+        return RedirectToRoute(new { controller = "Home", action = "Index" });
+      }
+      else
+      {
+        vm.HasError = userVm.HasError;
+        vm.Error = userVm.Error;
+        return View(vm);
+      }
+    }
+
+    public async Task<IActionResult> LogOut()
         {
             await _userService.SignOutAsync();
             HttpContext.Session.Remove("user");
