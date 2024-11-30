@@ -9,7 +9,11 @@ namespace InternetBanking.WebApp.Controllers
 {
     public class AuthController : BaseController
     {
-        private readonly IUserService _userService;
+    public IActionResult ForgotPasswordBasic() => View();
+    public IActionResult LoginBasic() => View();
+    public IActionResult RegisterBasic() => View();
+
+    private readonly IUserService _userService;
 
         public AuthController(IUserService userService)
         {
