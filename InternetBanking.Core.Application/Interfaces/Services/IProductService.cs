@@ -9,5 +9,7 @@ namespace InternetBanking.Core.Application.Interfaces.Services
         Task<List<ProductViewModel>> GetProductsByUserViewModel(string userId);
         Task<int> GetProductsCreatedAllTheTime();
         Task TransferAmountToPrincipal(string userId, double amount);
+
+        Task<List<LabelViewModel>> GetLabelsViewModel();
     }
 }

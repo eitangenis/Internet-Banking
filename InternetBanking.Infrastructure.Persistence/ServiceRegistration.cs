@@ -27,6 +27,7 @@ namespace InternetBanking.Infrastructure.Persistence
             #region Repositories
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<ILabelsRepository, LabelRepository>();
             services.AddTransient<IBeneficiaryRepository, BeneficiaryRepository>();
             services.AddTransient<IPaymentRepository, PaymentRepository>();
             #endregion

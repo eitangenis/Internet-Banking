@@ -7,6 +7,7 @@ namespace InternetBanking.Infrastructure.Persistence.Contexts
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options) :base(options) { }
 
+        public DbSet<Labels> Labels { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Beneficiary> Beneficiaries { get; set; }
         public DbSet<Payment> Payments { get; set; }
@@ -38,12 +39,14 @@ namespace InternetBanking.Infrastructure.Persistence.Contexts
             //FLUENT API
 
             #region tables
+            modelBuilder.Entity<Labels>().ToTable("Labels");
             modelBuilder.Entity<Product>().ToTable("Products");
             modelBuilder.Entity<Beneficiary>().ToTable("Beneficiaries");
             modelBuilder.Entity<Payment>().ToTable("Payments");
             #endregion
 
             #region "primary keys"
+            modelBuilder.Entity<Labels>().HasKey(p => p.Label);
             modelBuilder.Entity<Product>().HasKey(p => p.Id);
             modelBuilder.Entity<Beneficiary>().HasKey(p => p.Id);
             modelBuilder.Entity<Payment>().HasKey(p => p.Id);

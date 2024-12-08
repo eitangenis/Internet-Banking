@@ -8,4 +8,9 @@ namespace InternetBanking.Core.Application.Interfaces.Repositories
         Task<Product?> GetPrincipalProductByUserIdAsync(string userId);
         Task<Product?> GetProductByAccountNumberAsync(string accountNumber);
     }
+
+    public interface ILabelsRepository : IGenericRepository<Labels>
+    {
+        Task<List<Labels>> GetAllLabelsAsync();
+    }
 }

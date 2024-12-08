@@ -12,13 +12,16 @@ namespace InternetBanking.Core.Application.Services
     public class ProductService : GenericService<SaveProductViewModel, ProductViewModel, Product>, IProductService
     {
         private readonly IProductRepository _productRepository;
+        private readonly ILabelsRepository _labelsRepository;
         private readonly IUserService _userService;
         private readonly IMapper _mapper;
 
-        public ProductService(IProductRepository productRepository, IUserService userService, IMapper mapper) : base(productRepository, mapper)
+        public ProductService(IProductRepository productRepository, ILabelsRepository labelsRepository,
+            IUserService userService, IMapper mapper) : base(productRepository, mapper)
         {
             _productRepository = productRepository;
             _userService = userService;
+            _labelsRepository = labelsRepository;
             _mapper = mapper;
         }
 
@@ -112,6 +115,17 @@ namespace InternetBanking.Core.Application.Services
                 }).ToList();
         }
 
+        public async Task<List<LabelViewModel>> GetLabelsViewModel()
+        {
+            var labels = await _labelsRepository.GetAllLabelsAsync();
+
+           
+            return labels
+                .Select(p => new LabelViewModel
+                {
+                    label = p.Label
+                }).ToList();
+        }
         public async Task<int> GetProductsCreatedAllTheTime()
         {
             var products = await _productRepository.GetAllAsync();

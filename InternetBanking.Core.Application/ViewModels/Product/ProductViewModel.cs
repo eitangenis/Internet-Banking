@@ -14,4 +14,9 @@ namespace InternetBanking.Core.Application.ViewModels.Product
         public ProductType ProductType { get; set; }
         public bool IsPrincipal { get; set; }
     }
+    public class LabelViewModel
+    {
+        public string label { get; set; }
+
+    }
 }

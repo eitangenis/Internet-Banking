@@ -1,4 +1,4 @@
-﻿using InternetBanking.Core.Application.Dtos.Account;
+using InternetBanking.Core.Application.Dtos.Account;
 using InternetBanking.Core.Application.Interfaces.Services;
 using InternetBanking.Core.Application.Helpers;
 using InternetBanking.Models;
@@ -73,5 +73,8 @@ namespace InternetBanking.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        
+      
     }
 }

@@ -11,4 +11,9 @@ namespace InternetBanking.Core.Domain.Entities
         public int ProductTypeId { get; set; }
         public bool IsPrincipal { get; set; }
     }
+
+    public class Labels
+    {
+        public string Label { get; set; }
+    }
 }
